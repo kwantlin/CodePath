@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Creation View Controller-->
         <scene sceneID="X7O-Zk-J8J">
             <objects>
-                <viewController id="vAE-4q-8JF" sceneMemberID="viewController">
+                <viewController id="vAE-4q-8JF" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nOK-tW-in3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,8 +94,21 @@
                         <viewLayoutGuide key="safeArea" id="Jev-Ta-oZ3"/>
                     </view>
                     <navigationItem key="navigationItem" id="KjC-at-YRe">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="V4Y-8l-aJF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="V4Y-8l-aJF">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="vAE-4q-8JF" id="69m-8d-DhN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="8F7-rJ-bYS">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="vAE-4q-8JF" id="EsE-F4-xLK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="oBc-Rq-L6f" id="IV3-6E-kAG"/>
+                        <outlet property="questionTextField" destination="dUF-As-FFO" id="NfS-ro-StA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1C9-lQ-5XG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
